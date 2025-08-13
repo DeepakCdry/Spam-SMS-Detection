@@ -1,6 +1,3 @@
-# -*- coding: utf-8 -*-
-
-
 # %% 1. Import Libraries
 import numpy as np
 import pandas as pd
@@ -45,10 +42,6 @@ try:
 except LookupError:
     nltk.download('stopwords')
 
-# IMPORTANT: If you encounter an AttributeError related to 'nltk' (e.g., 'nltk' has no attribute 'download'),
-# it's likely due to a circular import. This often happens if you have a file named 'nltk.py'
-# in your current working directory or Python's import path.
-# Please rename or delete any local 'nltk.py' file that might be conflicting with the actual NLTK library.
 
 
 # %% 2. Data Loading and Initial Cleaning

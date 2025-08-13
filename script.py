@@ -347,8 +347,3 @@ print("Stacking Classifier Precision:", precision_score(y_test, y_pred_clf))
 
 pickle.dump(tfidf, open('vectorizer.pkl', 'wb'))
 pickle.dump(clf, open('model.pkl', 'wb'))
-
-
-
-
-print("\n'vectorizer.pkl' and 'model.pkl' have been saved successfully.")

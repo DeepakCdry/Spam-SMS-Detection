@@ -1,13 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Spyder Editor
 
-This script contains all the code from the SMS Spam Detection Jupyter Notebook.
-It performs data loading, cleaning, text preprocessing, TF-IDF vectorization,
-model training (various classifiers and a stacking classifier), evaluation,
-and finally saves the trained TF-IDF vectorizer and the best performing model
-using pickle.
-"""
 
 # %% 1. Import Libraries
 import numpy as np

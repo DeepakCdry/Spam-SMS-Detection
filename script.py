@@ -367,4 +367,3 @@ pickle.dump(clf, open('model.pkl', 'wb'))
 
 
 print("\n'vectorizer.pkl' and 'model.pkl' have been saved successfully.")
-print("These files are ready for deployment.")

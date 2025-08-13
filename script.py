@@ -21,22 +21,19 @@ from sklearn.ensemble import RandomForestClassifier, AdaBoostClassifier, Bagging
 from xgboost import XGBClassifier
 import pickle
 
-# Download NLTK resources if not already present
-# This block ensures that 'punkt' and 'stopwords' are available
+
+
+nltk.download('punkt')     
+nltk.download('punkt_tab')   
 
 
 
-nltk.download('punkt')       # Already downloaded, but no harm in repeating
-nltk.download('punkt_tab')   # 🔺This is missing and needs to be downloaded
-
-
-# Download 'punkt' if not available
 try:
     nltk.data.find('tokenizers/punkt')
 except LookupError:
     nltk.download('punkt')
 
-# Download 'stopwords' if not available
+
 try:
     nltk.data.find('corpora/stopwords')
 except LookupError:
@@ -343,7 +340,6 @@ print("Stacking Classifier Precision:", precision_score(y_test, y_pred_clf))
 
 # %% 9. Save the Model and Vectorizer
 # Save the TF-IDF vectorizer and the final StackingClassifier model
-# These files (vectorizer.pkl and model.pkl) are crucial for deployment
 
 pickle.dump(tfidf, open('vectorizer.pkl', 'wb'))
 pickle.dump(clf, open('model.pkl', 'wb'))
